@@ -1,0 +1,74 @@
+@import 'https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;900&display=swap';
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.item {
+    /* border: 1px solid lightskyblue; */
+}
+
+section {
+    height: 100vh;
+    display: grid;
+    grid-template: 70px 50px repeat(2, 1fr) 50px 70px 50px 1fr 1fr 50px 70px / repeat(4, 1fr) 70px 50px 1fr 1fr 50px 70px;
+}
+.item:nth-of-type(1) {
+    grid-row: 2 / 10 ;
+    grid-column: 3 / 9 ;
+    background: url('http://monsterbranding.com.mx/images/vision.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.item:nth-of-type(2) {
+    grid-row: 3 / 5 ;
+    grid-column: 3 / 8 ;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 900;
+    padding: 40px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    color: white;
+    
+}
+.item:nth-of-type(3) {
+    grid-row: 6 / 10 ;
+    grid-column: 3 / 6 ;
+    background-color: white;
+}
+.item:nth-of-type(4) {
+    grid-row: 8 / 10 ;
+    grid-column: 1 / 5 ;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 90px;
+    line-height: 80px;
+    font-weight: 900;
+}
+.item:nth-of-type(5) {
+    grid-row: 8 / 11 ;
+    grid-column: 1 / -1 ;
+    background-color: rgba(206, 202, 49, .7);
+    /* filter: contrast(200%); */
+}
+
+@media (max-width: 830px) {
+    .item:nth-of-type(1){
+        grid-column: 2 / 10 ;
+    }
+    .item:nth-of-type(2){
+        grid-column: 2 / 10 ;
+    }
+    .item:nth-of-type(3){
+        grid-column: 2 / 7 ;
+    }
+    .item:nth-of-type(4) {
+        grid-column: 4 / 6 ; 
+    }
+}
